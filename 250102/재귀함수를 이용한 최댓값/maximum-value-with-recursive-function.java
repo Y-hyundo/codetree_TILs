@@ -18,6 +18,9 @@ public class Main {
         if(n == 0)
             return arr[0];
 
-        return arr[n] >= find_max(arr, n - 1) ? arr[n] : find_max(arr, n - 1);
+        if(arr[n] > find_max(arr, n - 1))
+            return arr[n];
+        else
+            return find_max(arr, n - 1);       
     }
 }
