@@ -18,9 +18,7 @@ public class Main {
         if(n == 0)
             return arr[0];
 
-        if(arr[n] > find_max(arr, n - 1))
-            return arr[n];
-        else
-            return find_max(arr, n - 1);       
+        int a = find_max(arr, n - 1);
+        return arr[n] > a ? arr[n] : a;
     }
 }
