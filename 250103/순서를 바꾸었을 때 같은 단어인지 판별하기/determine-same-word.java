@@ -16,13 +16,12 @@ public class Main {
         Arrays.sort(word1);
         Arrays.sort(word2);
 
-        for(int i = 0; i < word1.length; i++) {
-            if(word1[i] != word2[i]) {
-                System.out.println("No");
-                return;
-            }
-        }
+        String sorted_word1 = new String(word1);
+        String sorted_word2 = new String(word2);
 
-        System.out.println("Yes");
+        if(sorted_word1.equals(sorted_word2))
+            System.out.println("Yes");
+        else
+            System.out.println("No");
     }
 }
