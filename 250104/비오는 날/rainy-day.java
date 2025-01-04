@@ -1,5 +1,4 @@
 import java.util.*;
-import java.time.*;
 
 class Weather {
     String date;
@@ -10,6 +9,11 @@ class Weather {
         this.date = date;
         this.day = day;
         this.weather = weather;
+    }
+
+    public int getDate() {
+        String[] split_date = date.split("-");
+        return Integer.parseInt(String.join("", split_date));
     }
 }
 public class Main {
@@ -23,23 +27,14 @@ public class Main {
         for(int i = 0; i < n; i++)
             data[i] = new Weather(sc.next(), sc.next(), sc.next());
 
-        String[] currentDateStr = (LocalDate.now().toString()).split("-");
-        int currentDate = Integer.parseInt(String.join("",currentDateStr));
-        int before_gap = currentDate;
         int closest = 0;
-
+        Arrays.sort(data, (o1, o2) -> {
+            return Integer.compare(o1.getDate(), o2.getDate());
+        });
         for(int i = 0; i < n; i++) {
-            if((data[i].weather).equals("Rain")) {
-                String[] date = (data[i].date).split("-");
-                int Date = Integer.parseInt(String.join("", date));
-                int new_gap = currentDate - Date;
-                if(new_gap < 0)
-                    new_gap *= -1;
-
-                if(new_gap < before_gap)
-                    closest = i;
-                
-                before_gap = new_gap;
+            if(data[i].weather.equals("Rain")) {
+                closest = i;
+                break;
             }
         }
 
