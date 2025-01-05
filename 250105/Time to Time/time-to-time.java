@@ -9,17 +9,7 @@ public class Main {
         int start_min = sc.nextInt();
         int end_hour = sc.nextInt();
         int end_min = sc.nextInt();
-        int elapsedTime = 0;
-
-        while(start_hour != end_hour || start_min != end_min) {
-            elapsedTime++;
-            start_min++;
-
-            if(start_min == 60) {
-                start_hour++;
-                start_min = 0;
-            }
-        }
+        int elapsedTime = (end_hour * 60 + end_min) - (start_hour * 60 + start_min);
 
         System.out.println(elapsedTime);
     }
