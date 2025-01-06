@@ -2,35 +2,14 @@ import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        // Please write your code here.
         Scanner sc = new Scanner(System.in);
 
-        int n = sc.nextInt();
-        int index = 0;
+        String binary = sc.next();
+
         int num = 0;
-        int digit = 0;
-
-        while(true) {
-            int square = 1;
-
-            if(n < 10) {
-                for(int i = 0; i < index; i++)
-                    square *= 2;
-                
-                digit = n % 10;
-                num += digit * square;
-                break;
-            }
-
-            digit = n % 10;
-            n /= 10;
-            
-            for(int i = 0; i < index; i++)
-                square *= 2;
-
-            num += digit * square;
-            index++;
-        }
-        System.out.println(num);
+        for(int i = 0; i < binary.length(); i++)
+            num = num * 2 + (binary.charAt(i) - '0');
+        
+        System.out.print(num);
     }
 }
