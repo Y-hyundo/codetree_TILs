@@ -43,7 +43,6 @@ public class Main {
                 }
             }
         }
-        System.out.println(totalDays);
         if(totalDays < 0)
             totalDays %= -7;
         else
