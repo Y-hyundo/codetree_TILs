@@ -21,8 +21,9 @@ public class Main {
 
             elapsedDays += getLastDay(m1);
         }
-
-        elapsedDays += d2;
+        if(m1 == m2)
+            elapsedDays += d2;
+            
         System.out.println(elapsedDays);
     }
 
