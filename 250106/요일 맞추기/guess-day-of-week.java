@@ -44,7 +44,7 @@ public class Main {
                 }
             }
         }
-        
+        totalDays %= 7;
         int today = (7 + totalDays) % 7;
         System.out.println(days[today]);
     }
