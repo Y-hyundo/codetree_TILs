@@ -6,8 +6,8 @@ public class Main {
         Scanner sc = new Scanner(System.in);
 
         int n = sc.nextInt();
-        int[] arr = new int[1000];
-        int index = 500;
+        int[] arr = new int[2001];
+        int index = 1000;
 
         for(int i = 0; i < n; i++) {
             int distance = sc.nextInt();
