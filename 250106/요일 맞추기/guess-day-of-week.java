@@ -14,12 +14,12 @@ public class Main {
         int totalDays = ((m2 - m1) * 30) + (d2 - d1);
         if(totalDays < 0) {
             totalDays *= -1;
-            totalDays %= 7;
+            totalDays %= 6;
             System.out.println(days[1 - totalDays]);
             return;
         }
         
-        totalDays %= 7;
+        totalDays %= 6;
         System.out.println(days[1 + totalDays]);
     }
 }
