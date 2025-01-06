@@ -28,7 +28,6 @@ public class Main {
                     if(d1 == 0) {
                         m1--;
                         d1 = getLastDay(m1);
-                        totalDays--;
                     }
                 }
 
@@ -44,6 +43,7 @@ public class Main {
                 }
             }
         }
+        System.out.println(totalDays);
         if(totalDays < 0)
             totalDays %= -7;
         else
