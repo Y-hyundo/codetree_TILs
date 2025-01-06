@@ -11,8 +11,14 @@ public class Main {
         int[] panel = new int[200];
 
         for(int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-            b[i] = sc.nextInt();
+            int x1 = sc.nextInt();
+            int x2 = sc.nextInt();
+            if(x1 < 0)
+                x1 += 100;
+            if(x2 < 0)
+                x2 += 100;
+            a[i] = x1;
+            b[i] = x2;
         }
 
         for(int i = 0; i < n; i++) {
