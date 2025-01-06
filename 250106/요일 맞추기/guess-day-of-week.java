@@ -20,6 +20,6 @@ public class Main {
         }
         
         totalDays %= 7;
-        System.out.println(days[1 - totalDays]);
+        System.out.println(days[1 + totalDays]);
     }
 }
