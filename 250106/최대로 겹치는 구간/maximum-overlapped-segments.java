@@ -12,9 +12,9 @@ public class Main {
 
         for(int i = 0; i < n; i++) {
             a[i] = sc.nextInt() + 100;
-            b[i] = sc.nextInt() + 100 - 1;
+            b[i] = sc.nextInt() + 100;
 
-            for(int j = a[i]; j <= b[i]; j++)
+            for(int j = a[i]; j < b[i]; j++)
                 arr[j]++;
         }
 
