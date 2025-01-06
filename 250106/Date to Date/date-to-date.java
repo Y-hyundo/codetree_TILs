@@ -13,18 +13,16 @@ public class Main {
         int elapsedDays = 1;
 
         while(true) {
-            if(m1 == m2 && d1 == d2) {
-                elapsedDays++;
+            if(m1 == m2 && d1 == d2)
                 break;
-            }
-                
-            
+               
             elapsedDays++;
             d1++;
             
             if(d1 == getLastDay(m1)) {
                 m1++;
                 d1 = 1;
+                elapsedDays++;
             }
         }
 
