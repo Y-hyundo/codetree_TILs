@@ -10,7 +10,7 @@ public class Main {
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
 
-        int elapsedDays = 1;
+        int elapsedDays = 0;
 
         while(true) {
             if(m1 == m2 && d1 == d2)
