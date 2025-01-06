@@ -21,7 +21,7 @@ public class Main {
                 if(m1 == m2 && d1 == d2)
                     break;
 
-                if(m2 < m1) {
+                if(m2 < m1 || (m1 == m2 && d2 < d1)) {
                     d1--;
                     totalDays--;
 
@@ -44,7 +44,10 @@ public class Main {
                 }
             }
         }
-        totalDays %= 7;
+        if(totalDays < 0)
+            totalDays %= -7;
+        else
+            totalDays %= 7;
         int today = (7 + totalDays) % 7;
         System.out.println(days[today]);
     }
