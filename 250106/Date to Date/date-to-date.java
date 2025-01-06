@@ -33,7 +33,7 @@ public class Main {
         if(m == 2)
             return 28;
 
-        if(m == 3 || m == 6 || m == 9 || m == 11)
+        if(m == 4 || m == 6 || m == 9 || m == 11)
             return 30;
         
         return 31;
