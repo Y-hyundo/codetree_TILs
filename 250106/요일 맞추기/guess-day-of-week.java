@@ -4,7 +4,7 @@ public class Main {
     public static void main(String[] args) {
         // Please write your code here.
         Scanner sc = new Scanner(System.in);
-        String[] days = new String[]{"Mon", "The", "Wed", "Thu", "Fri", "Sat", "Sun"};
+        String[] days = new String[]{"Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"};
 
         int m1 = sc.nextInt();
         int d1 = sc.nextInt();
