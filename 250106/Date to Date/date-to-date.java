@@ -16,7 +16,7 @@ public class Main {
 
         while(true) {
             m1++;
-            if(m1 == m2)
+            if(m1 >= m2)
                 break;
 
             elapsedDays += getLastDay(m1);
