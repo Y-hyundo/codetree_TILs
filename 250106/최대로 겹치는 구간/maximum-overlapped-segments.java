@@ -8,19 +8,22 @@ public class Main {
         int n = sc.nextInt();
         int[] a = new int[n];
         int[] b = new int[n];
+        int[] arr = new int[200];
 
         for(int i = 0; i < n; i++) {
-            a[i] = sc.nextInt();
-            b[i] = sc.nextInt();
+            a[i] = sc.nextInt() + 100;
+            b[i] = sc.nextInt() + 100;
+
+            for(int j = a[i]; j <= b[i]; j++)
+                arr[j]++;
         }
 
-        int count = 1;
-
-        for(int i = 0; i < n - 1; i++) {
-            if(b[i] > a[i + 1] && a[i] < b[i + 1])
-                count++;
+        int max = 0;
+        for(int i = 0; i < arr.length; i++) {
+            if(arr[i] > max)
+                max = arr[i];
         }
 
-        System.out.println(count);
+        System.out.println(max);
     }
 }
