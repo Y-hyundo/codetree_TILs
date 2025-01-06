@@ -17,6 +17,7 @@ public class Main {
                 for(int i = 0; i < index; i++)
                     square *= 2;
                 
+                digit = n % 10;
                 num += digit * square;
                 break;
             }
