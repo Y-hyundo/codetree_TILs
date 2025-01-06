@@ -10,20 +10,24 @@ public class Main {
         int m2 = sc.nextInt();
         int d2 = sc.nextInt();
 
-        int elapsedDays = 0;
-
-        int m1_lastDay = getLastDay(m1);
-        elapsedDays += m1_lastDay - d1 + 1;
+        int elapsedDays = 1;
 
         while(true) {
-            m1++;
-            if(m1 == m2)
+            if(m1 == m2 && d1 == d2) {
+                elapsedDays++;
                 break;
-
-            elapsedDays += getLastDay(m1);
+            }
+                
+            
+            elapsedDays++;
+            d1++;
+            
+            if(d1 == getLastDay(m1)) {
+                m1++;
+                d1 = 1;
+            }
         }
-        
-        elapsedDays += d2;
+
         System.out.println(elapsedDays);
     }
 
