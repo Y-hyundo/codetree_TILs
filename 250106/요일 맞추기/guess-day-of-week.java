@@ -25,9 +25,10 @@ public class Main {
                     d1--;
                     totalDays--;
 
-                    if(d1 == 0) {
+                    if(d1 == 1) {
                         m1--;
                         d1 = getLastDay(m1);
+                        totalDays--;
                     }
                 }
 
