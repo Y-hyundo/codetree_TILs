@@ -37,10 +37,13 @@ public class Main {
         int min_y = MAX_R;
         int max_x = 0;
         int max_y = 0;
-        
+        boolean isRemain = false;
+
         for(int i = x1[0]; i < x2[0]; i++) {
             for(int j = y1[0]; j < y2[0]; j++) {
                 if(rect[i][j] == 1) {
+                    isRemain = true;
+
                     if(min_x > i)
                         min_x = i;
                     if(min_y > j)
@@ -55,7 +58,7 @@ public class Main {
             }
         }
 
-        if(max_x == min_x && max_y == min_y) {
+        if(max_x == min_x && max_y == min_y || !isRemain) {
             System.out.println(0);
             return;
         }
