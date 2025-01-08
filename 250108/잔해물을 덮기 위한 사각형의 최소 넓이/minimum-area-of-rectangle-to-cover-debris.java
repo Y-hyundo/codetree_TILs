@@ -33,25 +33,29 @@ public class Main {
             }
         }
 
-        int min_x = 0;
-        int min_y = 0;
+        int min_x = MAX_R;
+        int min_y = MAX_R;
         int max_x = 0;
         int max_y = 0;
         
         for(int i = x1[0]; i < x2[0]; i++) {
             for(int j = y1[0]; j < y2[0]; j++) {
-                if(rect[i][j] == 1 && min_x == 0 && min_y == 0) {
-                    min_x = i;
-                    min_y = j;
-                }
                 if(rect[i][j] == 1) {
-                    max_x = i;
-                    max_y = j;
+                    if(min_x > i)
+                        min_x = i;
+                    if(min_y > j)
+                        min_y = j;
+                    
+                    if(max_x < i)
+                        max_x = i;
+                    
+                    if(max_y < j)
+                        max_y = j;
                 }
             }
         }
 
-        if(max_x == min_x && min_y == max_y) {
+        if(max_x == min_x && max_y == min_y) {
             System.out.println(0);
             return;
         }
