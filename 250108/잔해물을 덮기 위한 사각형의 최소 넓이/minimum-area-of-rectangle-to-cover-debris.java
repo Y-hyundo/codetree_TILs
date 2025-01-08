@@ -55,8 +55,8 @@ public class Main {
             System.out.println(0);
             return;
         }
-        int width = max_x - min_x;
-        int height = max_y - min_y;
+        int width = max_x - min_x + 1;
+        int height = max_y - min_y + 1;
 
         System.out.println(width * height);
     }
