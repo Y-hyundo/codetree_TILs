@@ -26,13 +26,14 @@ public class Main {
                 if(max_continue < continue_cnt)
                     max_continue = continue_cnt;
                 continue_cnt = 0;
-                isChange = true;
+                if(j != 0)
+                    isChange = true;
             }
             continue_cnt++;
         }
         if(isChange == false)
             max_continue = continue_cnt;
-            
+
         System.out.println(max_continue);
     }
 }
