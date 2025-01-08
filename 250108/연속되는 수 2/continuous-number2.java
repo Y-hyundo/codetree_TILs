@@ -17,18 +17,22 @@ public class Main {
         for(int i = 0; i < n; i++) {
             arr[i] = sc.nextInt();
         }
-        
-        int num_continue = 0;
+
+        int max_continue = 0;
+        boolean isChange = false;
 
         for(int j = 0; j < n; j++) {
             if(j == 0 || arr[j] != arr[j - 1]) {
-                if(continue_cnt < num_continue)
-                    continue_cnt = num_continue;
-                num_continue = 0;
+                if(max_continue < continue_cnt)
+                    max_continue = continue_cnt;
+                continue_cnt = 0;
+                isChange = true;
             }
-            num_continue++;
+            continue_cnt++;
         }
-
-        System.out.println(continue_cnt);
+        if(isChange == false)
+            max_continue = continue_cnt;
+            
+        System.out.println(max_continue);
     }
 }
