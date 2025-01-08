@@ -44,7 +44,7 @@ public class Main {
                     min_x = i;
                     min_y = j;
                 }
-                else {
+                else if(rect[i][j] == 1) {
                     max_x = i;
                     max_y = j;
                 }
