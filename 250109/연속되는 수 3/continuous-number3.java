@@ -18,7 +18,8 @@ public class Main {
                 if(max_continue < continue_cnt)
                     max_continue = continue_cnt;
                 continue_cnt = 0;
-                isChange = true;
+                if(i != 0)
+                    isChange = true;
             }
             continue_cnt++;
         }
