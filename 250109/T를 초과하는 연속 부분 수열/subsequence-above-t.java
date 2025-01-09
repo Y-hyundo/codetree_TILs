@@ -14,7 +14,7 @@ public class Main {
 
         int max = 0, cnt = 0;
         for(int i = 0; i < n; i++) {
-            if(i >= 1 && arr[i] > t)
+            if(arr[i] > t)
                 cnt++;
             else
                 cnt = 0;
