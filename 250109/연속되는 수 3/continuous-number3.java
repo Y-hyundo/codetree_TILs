@@ -1,32 +1,29 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Main {
     public static void main(String[] args) {
-        // Please write your code here.
         Scanner sc = new Scanner(System.in);
+    
         int n = sc.nextInt();
         int[] arr = new int[n];
-        int continue_cnt = 0;
-        int max_continue = 0;
-        boolean isChange = false;
 
         for(int i = 0; i < n; i++)
             arr[i] = sc.nextInt();
-
+        
+        // 연속하여 동일한 부호의 숫자가 나오는 횟수를 구해보며,
+        // 그 중 최댓값을 갱신
+        int ans = 0, cnt = 0;
         for(int i = 0; i < n; i++) {
-            if(i == 0 || arr[i] * arr[i - 1] < 0) {
-                if(max_continue < continue_cnt)
-                    max_continue = continue_cnt;
-                continue_cnt = 0;
-                if(i != 0)
-                    isChange = true;
-            }
-            continue_cnt++;
+            // Case 1
+            if(i >= 1 && arr[i] * arr[i - 1] > 0)
+                cnt++;
+            // Case 2
+            else
+                cnt = 1;
+            
+            ans = Math.max(ans, cnt);
         }
-
-        if(!isChange) {
-            max_continue = continue_cnt;
-        }
-        System.out.println(max_continue);
+        
+        System.out.print(ans);
     }
 }
