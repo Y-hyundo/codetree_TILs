@@ -19,7 +19,7 @@ public class Main {
             penalty_stu[target]++;
                     
             if(penalty_stu[target] >= k) {
-                System.out.println(students[j]);
+                System.out.println(target);
                 return;
             }
         }
