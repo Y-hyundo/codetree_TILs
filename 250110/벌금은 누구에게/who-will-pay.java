@@ -9,16 +9,16 @@ public class Main {
         int m = sc.nextInt();
         int k = sc.nextInt();
         int[] penalty = new int[m];
-        int[] penalty_stu = new int[n];
+        int[] penalty_stu = new int[n + 1];
 
         for(int i = 0; i < m; i++)
             penalty[i] = sc.nextInt();
 
         for(int i = 0; i < m; i++) {
             int target = penalty[i];
-            penalty_stu[target - 1]++;
+            penalty_stu[target]++;
                     
-            if(penalty_stu[target - 1] >= k) {
+            if(penalty_stu[target] >= k) {
                 System.out.println(target);
                 return;
             }
