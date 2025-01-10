@@ -14,19 +14,13 @@ public class Main {
         for(int i = 0; i < m; i++)
             penalty[i] = sc.nextInt();
 
-        int[] students = new int[n];
-        for(int i = 1; i <= n; i++)
-            students[i - 1] = i;
-
         for(int i = 0; i < m; i++) {
-            for(int j = 0; j < n; j++) {
-                if(penalty[i] == students[j])
-                    penalty_stu[j]++;
+            int target = penalty[i];
+            penalty_stu[target]++;
                     
-                if(penalty_stu[j] >= k) {
-                    System.out.println(students[j]);
-                    return;
-                }
+            if(penalty_stu[target] >= k) {
+                System.out.println(students[j]);
+                return;
             }
         }
 
