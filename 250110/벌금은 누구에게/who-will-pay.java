@@ -16,9 +16,9 @@ public class Main {
 
         for(int i = 0; i < m; i++) {
             int target = penalty[i];
-            penalty_stu[target]++;
+            penalty_stu[target - 1]++;
                     
-            if(penalty_stu[target] >= k) {
+            if(penalty_stu[target - 1] >= k) {
                 System.out.println(target);
                 return;
             }
