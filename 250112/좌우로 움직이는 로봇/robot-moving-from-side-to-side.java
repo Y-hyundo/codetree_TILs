@@ -57,15 +57,11 @@ public class Main {
                 int valueA = moveA.get(moveA.size() - 1);
                 if(valueA == moveB.get(i) && valueA != moveB.get(i - 1))
                     cnt++;
-            }
-            
-            if(i >= moveB.size()) {
+            } else if(i >= moveB.size()) {
                 int valueB = moveB.get(moveB.size() - 1);
                 if(valueB == moveA.get(i) && valueB != moveA.get(i - 1))
                     cnt++;
-            }
-            
-            if(i < moveA.size() && i < moveB.size()) {
+            } else {
                 if(i != 0 && moveB.get(i) == moveA.get(i) && moveB.get(i - 1) != moveA.get(i - 1))
                     cnt++;
             }
