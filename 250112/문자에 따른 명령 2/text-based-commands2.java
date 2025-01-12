@@ -14,7 +14,7 @@ public class Main {
 
         for(int i = 0; i < cmd.length(); i++) {
             if(cmd.charAt(i) == 'L')
-                dirNum = (dirNum - 1) % 4;
+                dirNum = (dirNum - 1 + 4) % 4;
             else if(cmd.charAt(i) == 'R')
                 dirNum = (dirNum + 1) % 4;
             else {
