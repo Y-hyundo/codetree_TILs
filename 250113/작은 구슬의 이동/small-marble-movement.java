@@ -27,13 +27,12 @@ public class Main {
 
         for(int i = 0; i < t; i++) {
             int nx = c + dx[dirNum], ny = r + dy[dirNum];
-            if(!inRange(nx, ny, n)) {
+            if(!inRange(nx, ny, n))
                 dirNum = 3 - dirNum;
-                continue;
+            else {
+                c = c + dx[dirNum];
+                r = r + dy[dirNum];
             }
-
-            c = c + dx[dirNum];
-            r = r + dy[dirNum];
         }
 
         System.out.println(r + " " + c);        
