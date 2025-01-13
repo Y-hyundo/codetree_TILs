@@ -28,7 +28,7 @@ public class Main {
                 x += dx[dir];
                 y += dy[dir];
                 second++;
-                if(x == 1000 && y == 1000) {
+                if(x == 0 && y == 0) {
                     System.out.println(second);
                     return;
                 }
