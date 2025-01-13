@@ -21,9 +21,9 @@ public class Main {
         else if(dir.equals("R"))
             dirNum = 1;
         else if(dir.equals("U"))
-            dirNum = 0;
-        else
             dirNum = 3;
+        else
+            dirNum = 0;
 
         for(int i = 0; i < t; i++) {
             int nx = c + dx[dirNum], ny = r + dy[dirNum];
