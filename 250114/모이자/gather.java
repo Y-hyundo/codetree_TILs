@@ -13,14 +13,10 @@ public class Main {
         int minSum = Integer.MAX_VALUE;
         for(int i = 0; i < n; i++) {
             int distanceSum = 0;
-            for(int j = 0; j < n; j++) {
-                if(i == j)
-                    distanceSum += arr[j] * 0;
-                else
-                    distanceSum += arr[j] * Math.abs(i - j);
-            }
-            if(distanceSum < minSum)
-                minSum = distanceSum;
+            for(int j = 0; j < n; j++)
+                distanceSum += Math.abs(j - i) * arr[j];
+
+            minSum = Math.min(minSum, distanceSum);
         }
 
         System.out.println(minSum);
