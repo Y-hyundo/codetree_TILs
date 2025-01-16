@@ -14,8 +14,8 @@ public class Main {
         int indexA = 0;
         int indexB = 0;
 
-        moveA.add(0);
-        moveB.add(0);
+        // moveA.add(0);
+        // moveB.add(0);
 
         for(int i = 0; i < n; i++) {
             int t = sc.nextInt();
