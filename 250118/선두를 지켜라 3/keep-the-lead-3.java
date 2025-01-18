@@ -7,14 +7,17 @@ public class Main {
 
         int n = sc.nextInt();
         int m = sc.nextInt();
-        long indexA = 0;
-        long indexB = 0;
+        int indexA = 0;
+        int indexB = 0;
 
-        ArrayList<Long> moveA = new ArrayList<>();
-        ArrayList<Long> moveB = new ArrayList<>();
+        ArrayList<Integer> moveA = new ArrayList<>();
+        ArrayList<Integer> moveB = new ArrayList<>();
+
+        moveA.add(0);
+        moveB.add(0);
 
         for(int i = 0; i < n; i++) {
-            long v = sc.nextLong();
+            int v = sc.nextInt();
             int t = sc.nextInt();
 
             for(int j = 0; j < t; j++) {
@@ -24,7 +27,7 @@ public class Main {
         }
 
         for(int i = 0; i < m; i++) {
-            long v = sc.nextLong();
+            int v = sc.nextInt();
             int t = sc.nextInt();
 
             for(int j = 0; j < t; j++) {
@@ -36,11 +39,11 @@ public class Main {
         int cnt = 0;
         String winner = "AB";
 
-        for(int i = 0; i < moveA.size(); i++) {
+        for(int i = 1; i < moveA.size(); i++) {
             String current_winner;
             if(moveA.get(i) > moveB.get(i))
                 current_winner = "A";
-            else if(moveA.get(i) == moveB.get(i))
+            else if(moveA.get(i).equals(moveB.get(i)))
                 current_winner = "AB";
             else
                 current_winner = "B";
