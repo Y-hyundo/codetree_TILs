@@ -7,17 +7,14 @@ public class Main {
 
         int n = sc.nextInt();
         int m = sc.nextInt();
-        int indexA = 0;
-        int indexB = 0;
+        long indexA = 0;
+        long indexB = 0;
 
-        ArrayList<Integer> moveA = new ArrayList<>();
-        ArrayList<Integer> moveB = new ArrayList<>();
-
-        moveA.add(0);
-        moveB.add(0);
+        ArrayList<Long> moveA = new ArrayList<>();
+        ArrayList<Long> moveB = new ArrayList<>();
 
         for(int i = 0; i < n; i++) {
-            int v = sc.nextInt();
+            long v = sc.nextLong();
             int t = sc.nextInt();
 
             for(int j = 0; j < t; j++) {
@@ -27,7 +24,7 @@ public class Main {
         }
 
         for(int i = 0; i < m; i++) {
-            int v = sc.nextInt();
+            long v = sc.nextLong();
             int t = sc.nextInt();
 
             for(int j = 0; j < t; j++) {
