@@ -38,13 +38,7 @@ public class Main {
 
         int cnt = 0;
 
-        String winner;
-        if(moveA.get(0) > moveB.get(0))
-            winner = "A";
-        else if(moveA.get(0) == moveB.get(0))
-            winner = "AB";
-        else
-            winner = "B";
+        String winner = "";
 
         for(int i = 1; i < moveA.size(); i++) {
             String current_winner;
