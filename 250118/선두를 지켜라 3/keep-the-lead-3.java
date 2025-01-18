@@ -37,7 +37,6 @@ public class Main {
         }
 
         int cnt = 0;
-
         String winner = "";
 
         for(int i = 1; i < moveA.size(); i++) {
@@ -49,10 +48,10 @@ public class Main {
             else
                 current_winner = "B";
 
-            if(!current_winner.equals(winner)) {
+            if(!current_winner.equals(winner))
                 cnt++;
-                winner = current_winner;
-            }
+            
+            winner = current_winner;
         }
 
         System.out.println(cnt);
